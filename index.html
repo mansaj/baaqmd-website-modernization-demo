@@ -1,9 +1,8 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>baaqmd.gov measured - MANSA LLC, RFI 2026-037 response artifact</title>
-<meta name="description" content="Measured inventory and re-architecture prototype for baaqmd.gov, submitted as a demonstration artifact to RFI 2026-037.">
+<title>baaqmd.gov measured: MANSA LLC artifact for RFI 2026-037</title>
 <style>
-:root{--bg:#0d1117;--panel:#151b23;--line:#242c38;--ink:#e8ebf0;--mut:#9aa3b2;--acc:#5b9dff;--ok:#3fb950;--warn:#d29922}
+:root{--bg:#0d1117;--panel:#151b23;--line:#242c38;--ink:#e8ebf0;--mut:#a7b0be;--acc:#79aaff;--ok:#56d364;--warn:#e3b341}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
 a{color:var(--acc)}
@@ -13,11 +12,11 @@ header{border-bottom:1px solid var(--line);padding:28px 20px}
 .wrap{max-width:1000px;margin:0 auto;padding:0 20px}
 h1{font-size:clamp(22px,3vw,30px);margin:0 0 6px}
 .sub{color:var(--mut);font-size:14px}
-.badge{display:inline-block;font-size:12px;color:var(--ok);border:1px solid var(--ok);border-radius:99px;padding:2px 10px;margin-right:8px}
+.badge{display:inline-block;font-size:12px;color:var(--ink);border:1px solid var(--line);border-radius:99px;padding:2px 10px;margin-right:8px}
 section{padding:32px 0;border-bottom:1px solid var(--line)}
 h2{font-size:19px;margin:0 0 4px}
-h2 .n{color:var(--acc);font-variant-numeric:tabular-nums;margin-right:8px}
-.note{color:var(--mut);font-size:13.5px;margin:0 0 18px}
+h2 .n{color:var(--acc);margin-right:8px}
+.note{color:var(--mut);font-size:14px;margin:0 0 18px}
 .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px}
 .kpi{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
 .kpi .v{font-size:26px;font-weight:650;font-variant-numeric:tabular-nums}
@@ -25,7 +24,7 @@ h2 .n{color:var(--acc);font-variant-numeric:tabular-nums;margin-right:8px}
 .kpi .d{font-size:12.5px;color:var(--warn);margin-top:4px}
 .bar{display:grid;grid-template-columns:190px 1fr 64px;gap:10px;align-items:center;margin:6px 0;font-size:14px}
 .track{background:#1e2530;border-radius:6px;height:10px;overflow:hidden}
-.track i{display:block;height:100%;background:linear-gradient(90deg,#2f6fd0,#5b9dff)}
+.track i{display:block;height:100%;background:#3f7bd0}
 .bar b{text-align:right;font-variant-numeric:tabular-nums;font-weight:600}
 .card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:12px 0}
 .card h3{margin:6px 0 8px;font-size:17px}
@@ -44,71 +43,66 @@ details summary{cursor:pointer;color:var(--acc);font-size:14px;margin-top:10px}
 <a class="skip" href="#main">Skip to content</a>
 <header><div class="wrap">
 <div><span class="badge">RFI 2026-037 artifact</span><span class="badge">measured 2026-11-17</span></div>
-<h1>baaqmd.gov, measured and re-architected</h1>
-<p class="sub">MANSA LLC &middot; demonstration submitted with our response to Air District RFI 2026-037 (Website Modernization and Content Management System)</p>
+<h1>baaqmd.gov, measured and modeled</h1>
+<p class="sub">MANSA LLC. Demonstration submitted with MANSA's response to Air District RFI 2026-037, Website Modernization and Content Management System.</p>
 </div></header>
 <main id="main"><div class="wrap">
 
 <section aria-labelledby="s1">
-<h2 id="s1"><span class="n">01</span>What the public estate actually is</h2>
-<p class="note">Method: every domain's <code>sitemap.xml</code> fetched 2026-11-17, each entry counted, then verified with real HTTP requests. Reproducible.</p>
+<h2 id="s1"><span class="n">01</span>What the public estate is</h2>
+<p class="note">Method: each domain's sitemap fetched 2026-11-17, every entry counted, then verified with real requests. The District's own preliminary count of about 1,360 HTML pages and 25,000 media entries agrees with this measurement.</p>
 <div class="kpis">
-<div class="kpi"><div class="v">26,871</div><div class="l">entries in the sitemaps</div><div class="d">the "26,000 URLs" figure</div></div>
-<div class="kpi"><div class="v">25,362</div><div class="l">are CMS authoring paths</div><div class="d">94.4% of the total, soft-404 to visitors</div></div>
-<div class="kpi"><div class="v">1,509</div><div class="l">live public pages</div><div class="d">the real migration scope</div></div>
-<div class="kpi"><div class="v">14,056</div><div class="l">"&hellip;-pdf" authoring item names</div><div class="d">where the "13,750 PDFs" estimate came from</div></div>
-<div class="kpi"><div class="v">~3,600</div><div class="l">document references on live pages</div><div class="d">120-page sample, 2.38 per page</div></div>
-<div class="kpi"><div class="v">726</div><div class="l">dated news pages to archive</div><div class="d">48% of the site, not rebuild work</div></div>
+<div class="kpi"><div class="v">26,871</div><div class="l">entries in the sitemaps</div><div class="d">26,815 unique</div></div>
+<div class="kpi"><div class="v">25,362</div><div class="l">are CMS authoring paths</div><div class="d">94.4%, not public addresses</div></div>
+<div class="kpi"><div class="v">1,509</div><div class="l">live public pages</div><div class="d">1,399 on the main site, 110 elsewhere</div></div>
+<div class="kpi"><div class="v">14,056</div><div class="l">authoring item names ending -pdf</div><div class="d">the source of the 13,750 PDF figure</div></div>
+<div class="kpi"><div class="v">~3,600</div><div class="l">document links on live pages</div><div class="d">120-page sample, 2.38 per page</div></div>
+<div class="kpi"><div class="v">726</div><div class="l">dated news pages to archive</div><div class="d">48.1% of the estate</div></div>
 </div>
-<details><summary>How the authoring-path finding was proven</summary>
-<p class="note">30 randomly selected <code>/sitecore/shell/sitecore/media-library/&hellip;</code> URLs were requested. All 30 returned HTTP 200 with <code>text/html</code> and a final URL of <code>/utils/404?item=&hellip;</code> &mdash; the site's soft-404 page. Amusingly, that means they look "fine" to a link checker that only reads status codes. Public documents are served from a different path, <code>/-/media/dotgov/files/&hellip;</code>; 45 of 45 sampled document links returned <code>application/pdf</code>.</p>
+<details><summary>How the authoring-path finding was verified</summary>
+<p class="note">30 sampled authoring paths were requested. All 30 returned HTTP 200 with text/html and a final address of /utils/404?item=..., the site's soft-404 page. A link checker that reads status codes alone would score them as healthy. Public copies of documents are served from the media handler path instead, for example /-/media/dotgov/files/..., and mapping an authoring path to its public address is not a mechanical substitution: 10 sampled items could not be resolved that way. The count of documents that are public and must stay public therefore comes from the District's media export, not from the sitemap.</p>
 </details>
 </section>
 
 <section aria-labelledby="s2">
-<h2 id="s2"><span class="n">02</span>Disposition of all 1,509 live pages</h2>
-<p class="note">A rule set applied to every URL, the artifact our migration method produces first: each page gets one disposition before anything moves.</p>
+<h2 id="s2"><span class="n">02</span>First-pass disposition of all 1,509 live pages</h2>
+<p class="note">Rule set applied to every URL before any migration work. A first pass by section rule, confirmed page by page at discovery. Keep: everything outside News-and-Events and About-the-Air-District interiors. Merge: About-the-Air-District interiors. Archive: News-and-Events pages with a year segment. Retire: pages under /sectest2/.</p>
 <div class="kpis" style="margin-bottom:18px">
 <div class="kpi"><div class="v" style="color:var(--ok)">594</div><div class="l">keep and rebuild</div></div>
 <div class="kpi"><div class="v">183</div><div class="l">merge into a surviving page</div></div>
 <div class="kpi"><div class="v">726</div><div class="l">archive, do not rebuild</div></div>
-<div class="kpi"><div class="v" style="color:var(--warn)">6</div><div class="l">retire (live test pages)</div></div>
+<div class="kpi"><div class="v" style="color:var(--warn)">6</div><div class="l">retire: live test pages</div></div>
 </div>
-<h3 style="font-size:15px;margin:18px 0 8px">Where the 1,509 pages sit</h3>
-<div class="bar"><span class="lab">News-and-Events</span><span class="track"><i style="width:100%"></i></span><b>734</b></div><div class="bar"><span class="lab">About-the-Air-District</span><span class="track"><i style="width:24%"></i></span><b>183</b></div><div class="bar"><span class="lab">Rules-and-Compliance</span><span class="track"><i style="width:22%"></i></span><b>168</b></div><div class="bar"><span class="lab">Funding-and-Incentives</span><span class="track"><i style="width:9%"></i></span><b>71</b></div><div class="bar"><span class="lab">About-Air-Quality</span><span class="track"><i style="width:8%"></i></span><b>62</b></div><div class="bar"><span class="lab">Permits</span><span class="track"><i style="width:6%"></i></span><b>50</b></div><div class="bar"><span class="lab">Plans-and-Climate</span><span class="track"><i style="width:6%"></i></span><b>49</b></div><div class="bar"><span class="lab">Reduce-Your-Impact</span><span class="track"><i style="width:4%"></i></span><b>32</b></div><div class="bar"><span class="lab">Community-Health</span><span class="track"><i style="width:3%"></i></span><b>28</b></div><div class="bar"><span class="lab">Contact-Us</span><span class="track"><i style="width:2%"></i></span><b>18</b></div><div class="bar"><span class="lab">Understanding-Air-Quality</span><span class="track"><i style="width:2%"></i></span><b>16</b></div><div class="bar"><span class="lab">Connect-with-Us</span><span class="track"><i style="width:1%"></i></span><b>14</b></div>
-<p class="note" style="margin-top:14px">News and events is 52.5% of the estate and is dated archive material. Rebuilding it in a new component model is the single largest avoidable cost in this program; a retention rule, a static archive and a redirect map are the cheaper and more defensible answer.</p>
+<h3 style="font-size:15px;margin:18px 0 8px">www.baaqmd.gov, 1,399 pages by section</h3>
+<div class="bar"><span class="lab">News-and-Events</span><span class="track"><i style="width:100%"></i></span><b>734</b></div><div class="bar"><span class="lab">About-the-Air-District</span><span class="track"><i style="width:24%"></i></span><b>183</b></div><div class="bar"><span class="lab">Rules-and-Compliance</span><span class="track"><i style="width:22%"></i></span><b>168</b></div><div class="bar"><span class="lab">Funding-and-Incentives</span><span class="track"><i style="width:9%"></i></span><b>71</b></div><div class="bar"><span class="lab">About-Air-Quality</span><span class="track"><i style="width:8%"></i></span><b>62</b></div><div class="bar"><span class="lab">Permits</span><span class="track"><i style="width:6%"></i></span><b>50</b></div><div class="bar"><span class="lab">Plans-and-Climate</span><span class="track"><i style="width:6%"></i></span><b>49</b></div><div class="bar"><span class="lab">Community-Health</span><span class="track"><i style="width:3%"></i></span><b>28</b></div><div class="bar"><span class="lab">Contact-Us</span><span class="track"><i style="width:2%"></i></span><b>18</b></div><div class="bar"><span class="lab">Online-Services</span><span class="track"><i style="width:1%"></i></span><b>13</b></div><div class="bar"><span class="lab">Forms</span><span class="track"><i style="width:0%"></i></span><b>7</b></div><div class="bar"><span class="lab">Publications</span><span class="track"><i style="width:0%"></i></span><b>6</b></div><div class="bar"><span class="lab">Other</span><span class="track"><i style="width:1%"></i></span><b>10</b></div>
+<p class="note" style="margin-top:14px">These thirteen rows sum to 1,399. The other 110 pages sit on sparetheair.org (76), the strategic plan site (28) and three microsites (2 each).</p>
 </section>
 
 <section aria-labelledby="s3">
-<h2 id="s3"><span class="n">03</span>The same content, as structured records</h2>
-<p class="note">Three real pages, extracted 2026-11-17 and re-expressed as typed records. This is the content model a headless platform needs before migration can be automated, and it is what makes authoring-time accessibility and multilingual publishing enforceable.</p>
-<article class="card"><div class="kind">News release</div><h3>Air District shares Bay Area clean air leadership at COP31 in Antalya</h3>
-    <p>The Air District shared how the Bay Area turns climate commitments into cleaner air at the United Nations Climate Change Conference, or COP31, which runs November 9 through 20. During a live virtual press conference from Antalya on November 10, Air District leaders described how regional action protects communities already living with the impacts of climate change.</p><p>At COP31, Air District representatives joined subnational and regional leaders to discuss resilient cities, electrification and grids and sustainable transportation. The Air District emphasized its work to deliver cleaner air at the regional level through programs and funding opportunities, while working with partners at COP31 to accelerate solutions for the people who need them most.</p><ul class="meta"><li>Date</li></ul>
-    <div class="src">source: <a href="https://www.baaqmd.gov/News-and-Events/Page-Resources/2026-News/111026-COP31">/News-and-Events/Page-Resources/2026-News/111026-COP31</a></div></article><article class="card"><div class="kind">Rule</div><h3>Agricultural Waste Chipping Program</h3>
-    <p>Thank you for taking advantage of the Air District’s Agricultural Waste Chipping Program, and for keeping unhealthy smoke emissions from Bay Area skies. Your feedback allows us to measure and improve the level of service we provide to our customers, and it helps ensure program funds are used effectively to protect public health and the environment.</p>
-    <div class="src">source: <a href="https://www.baaqmd.gov/Rules-and-Compliance/Agricultural-Waste-Chipping-Program-Survey">/Rules-and-Compliance/Agricultural-Waste-Chipping-Program-Survey</a></div></article><article class="card"><div class="kind">Program</div><h3>Permit Types and Process</h3>
-    <p>The Air District&#x27;s permitting process encompasses multiple permit types to ensure comprehensive environmental compliance. While most projects require two fundamental permits, certain major facilities are subject to additional regulatory oversight.</p><p>The standard permitting process requires two critical permits that must be obtained prior to initiating any project. The two essential permits are the Authority to Construct (ATC) and the Permit to Operate (PO).</p><ul class="meta"><li>Types of Permits</li><li>Permit Requirements</li><li>Permit Process</li><li>Contacting Us</li></ul>
-    <div class="src">source: <a href="https://www.baaqmd.gov/Permits/Permit-Instructions">/Permits/Permit-Instructions</a></div></article>
-<details><summary>Show the record as JSON, the shape an API would return</summary>
+<h2 id="s3"><span class="n">03</span>The same content as typed records</h2>
+<p class="note">Three real pages, fetched 2026-11-17, re-expressed as records. This is the content model a headless platform needs before migration can be automated, and what makes authoring-time accessibility and multilingual publishing enforceable.</p>
+<article class="card"><div class="kind">Rule development</div><h3>Rules Under Development</h3><p>Find information on the Air District&#x27;s rule development efforts, including draft rule documents, opportunities for public participation, and public workshop materials.</p><p>Update: Effective July 1, 2026, all written comments for rule development efforts will be accepted through our newly developed comment tool here: Public Comment Tool.</p>
+    <ul class="meta"><li>AB 617 Expedited BARCT Implementation Schedule</li><li>Rules Under Development</li><li>Public Workshops and Materials</li></ul>
+    <div class="src">source page: <a href="https://www.baaqmd.gov/Rules-and-Compliance/Rule-Development/Rules-Under-Development">/Rules-and-Compliance/Rule-Development/Rules-Under-Development</a></div></article><article class="card"><div class="kind">Permit process</div><h3>Permit Types and Process</h3><p>The Air District&#x27;s permitting process encompasses multiple permit types to ensure comprehensive environmental compliance. While most projects require two fundamental permits, certain major facilities are subject to additional regulatory oversight.</p><p>The standard permitting process requires two critical permits that must be obtained prior to initiating any project. The two essential permits are the Authority to Construct (ATC) and the Permit to Operate (PO).</p>
+    <ul class="meta"><li>Types of Permits</li><li>Permit Requirements</li><li>Permit Process</li><li>Contacting Us</li></ul>
+    <div class="src">source page: <a href="https://www.baaqmd.gov/Permits/Permit-Instructions">/Permits/Permit-Instructions</a></div></article><article class="card"><div class="kind">News release</div><h3>Air District shares Bay Area clean air leadership at COP31 in Antalya</h3><p>The Air District shared how the Bay Area turns climate commitments into cleaner air at the United Nations Climate Change Conference, or COP31, which runs November 9 through 20. During a live virtual press conference from Antalya on November 10, Air District leaders described how regional action protects communities already living with the impacts of climate change.</p><p>At COP31, Air District representatives joined subnational and regional leaders to discuss resilient cities, electrification and grids and sustainable transportation. The Air District emphasized its work to deliver cleaner air at the regional level through programs and funding opportunities, while working with partners at COP31 to accelerate solutions for the people who need the</p>
+    <ul class="meta"><li>Date</li></ul>
+    <div class="src">source page: <a href="https://www.baaqmd.gov/News-and-Events/Page-Resources/2026-News/111026-COP31">/News-and-Events/Page-Resources/2026-News/111026-COP31</a></div></article>
+<details><summary>Show one record as JSON, the shape an API would return</summary>
 <pre>[
   {
-    &quot;type&quot;: &quot;news&quot;,
-    &quot;title&quot;: &quot;Air District shares Bay Area clean air leadership at COP31 in Antalya&quot;,
-    &quot;body_excerpt&quot;: &quot;The Air District shared how the Bay Area turns climate commitments into cleaner air at the United Nations Climate Change Conference, or COP31, which runs November 9 through 20. During a live virtual press conference from Antalya on November 10, Air District leaders described how regional action prot&quot;,
+    &quot;type&quot;: &quot;rule_development&quot;,
+    &quot;title&quot;: &quot;Rules Under Development&quot;,
+    &quot;body_excerpt&quot;: &quot;Find information on the Air District&#x27;s rule development efforts, including draft rule documents, opportunities for public participation, and public workshop materials.&quot;,
     &quot;sections&quot;: [
-      &quot;Date&quot;
+      &quot;AB 617 Expedited BARCT Implementation Schedule&quot;,
+      &quot;Rules Under Development&quot;,
+      &quot;Public Workshops and Materials&quot;
     ],
-    &quot;canonical_url&quot;: &quot;https://www.baaqmd.gov/News-and-Events/Page-Resources/2026-News/111026-COP31&quot;
+    &quot;canonical_url&quot;: &quot;https://www.baaqmd.gov/Rules-and-Compliance/Rule-Development/Rules-Under-Development&quot;
   },
   {
-    &quot;type&quot;: &quot;rule&quot;,
-    &quot;title&quot;: &quot;Agricultural Waste Chipping Program&quot;,
-    &quot;body_excerpt&quot;: &quot;Thank you for taking advantage of the Air District\u2019s Agricultural Waste Chipping Program, and for keeping unhealthy smoke emissions from Bay Area skies. Your feedback allows us to measure and improve the level of service we provide to our customers, and it helps ensure program funds are used effecti&quot;,
-    &quot;sections&quot;: [],
-    &quot;canonical_url&quot;: &quot;https://www.baaqmd.gov/Rules-and-Compliance/Agricultural-Waste-Chipping-Program-Survey&quot;
-  },
-  {
-    &quot;type&quot;: &quot;program&quot;,
+    &quot;type&quot;: &quot;permit_process&quot;,
     &quot;title&quot;: &quot;Permit Types and Process&quot;,
     &quot;body_excerpt&quot;: &quot;The Air District&#x27;s permitting process encompasses multiple permit types to ensure comprehensive environmental compliance. While most projects require two fundamental permits, certain major facilities are subject to additional regulatory oversight.&quot;,
     &quot;sections&quot;: [
@@ -118,24 +112,33 @@ details summary{cursor:pointer;color:var(--acc);font-size:14px;margin-top:10px}
       &quot;Contacting Us&quot;
     ],
     &quot;canonical_url&quot;: &quot;https://www.baaqmd.gov/Permits/Permit-Instructions&quot;
+  },
+  {
+    &quot;type&quot;: &quot;news_release&quot;,
+    &quot;title&quot;: &quot;Air District shares Bay Area clean air leadership at COP31 in Antalya&quot;,
+    &quot;body_excerpt&quot;: &quot;The Air District shared how the Bay Area turns climate commitments into cleaner air at the United Nations Climate Change Conference, or COP31, which runs November 9 through 20. During a live virtual press conference from Antalya on November 10, Air District le&quot;,
+    &quot;sections&quot;: [
+      &quot;Date&quot;
+    ],
+    &quot;canonical_url&quot;: &quot;https://www.baaqmd.gov/News-and-Events/Page-Resources/2026-News/111026-COP31&quot;
   }
 ]</pre>
 </details>
 </section>
 
 <section aria-labelledby="s4">
-<h2 id="s4"><span class="n">04</span>What this page is, and is not</h2>
+<h2 id="s4"><span class="n">04</span>What this page is and is not</h2>
 <table><tbody>
 <tr><th>Page weight</th><td>Single document, no framework, no external requests, no fonts, no trackers</td></tr>
-<tr><th>Accessibility</th><td>WCAG 2.2 AA by construction: skip link, landmarks, one h1, visible focus, 4.5:1 text contrast, 44px targets, no motion, semantic tables with headers, text resizes to 200% without loss</td></tr>
-<tr><th>Data</th><td>Every number above came from a request made against the public site on 2026-11-17; the sampling method is stated where a figure is an extrapolation</td></tr>
-<tr><th>What it is not</th><td>Not a proposed design for the District's new site. The strategic plan site is the look-and-feel reference, and the District is not carrying the current design forward. This proves measurement and modeling, not visual design</td></tr>
+<tr><th>Accessibility</th><td>Built to WCAG 2.2 AA: skip link, landmarks, one h1, visible focus, 4.5:1 text contrast, 44px targets, no motion, semantic tables, text resizes to 200%</td></tr>
+<tr><th>Data</th><td>Every number came from a request made against the public site on 2026-11-17; sampling is stated where a figure is an extrapolation</td></tr>
+<tr><th>What it is not</th><td>Not a design proposal. The strategic plan site is the District's look-and-feel reference and the current design is not being carried forward. This demonstrates measurement and content modeling</td></tr>
 </tbody></table>
-<p class="disc" style="margin-top:18px">Independent analysis prepared by MANSA LLC for RFI 2026-037. Not affiliated with, endorsed by, or produced for the Bay Area Air Quality Management District. Quoted text is excerpted from publicly accessible pages for identification and commentary.</p>
+<p class="disc" style="margin-top:18px">Independent analysis prepared by MANSA LLC for RFI 2026-037. Not affiliated with or endorsed by the Bay Area Air Quality Management District. Quoted text is excerpted from publicly accessible pages for identification and commentary.</p>
 </section>
 
 </div></main>
 <footer><div class="wrap">
-MANSA LLC &middot; Seattle, Washington &middot; UEI G5CQFNE82EL7 &middot; CAGE 21D86 &middot; joe@mansagov.com<br>
-Measured 2026-11-17. Method: sitemap enumeration plus verified HTTP sampling; full numbers in the response narrative, item 3.3.
+MANSA LLC, Seattle, Washington. UEI G5CQFNE82EL7, CAGE 21D86, joe@mansagov.com.<br>
+Numbers and method: response narrative item 3.1.3 and the measurement note filed with it.
 </div></footer></body></html>
