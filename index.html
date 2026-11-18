@@ -53,29 +53,29 @@ details summary{cursor:pointer;color:var(--acc);font-size:14px;margin-top:10px}
 <p class="note">Method: each domain's sitemap fetched 2026-11-17, every entry counted, then verified with real requests. The District's own preliminary count of about 1,360 HTML pages and 25,000 media entries agrees with this measurement.</p>
 <div class="kpis">
 <div class="kpi"><div class="v">26,871</div><div class="l">entries in the sitemaps</div><div class="d">26,815 unique</div></div>
-<div class="kpi"><div class="v">25,362</div><div class="l">are CMS authoring paths</div><div class="d">94.4%, not public addresses</div></div>
-<div class="kpi"><div class="v">1,509</div><div class="l">live public pages</div><div class="d">1,399 on the main site, 110 elsewhere</div></div>
-<div class="kpi"><div class="v">14,056</div><div class="l">authoring item names ending -pdf</div><div class="d">the source of the 13,750 PDF figure</div></div>
+<div class="kpi"><div class="v">25,347</div><div class="l">are CMS authoring paths (unique)</div><div class="d">94.5% of unique entries, not public addresses</div></div>
+<div class="kpi"><div class="v">1,468</div><div class="l">unique live pages</div><div class="d">1,399 main site, 69 elsewhere</div></div>
+<div class="kpi"><div class="v">14,056</div><div class="l">authoring names ending -pdf</div><div class="d">consistent with the District's 13,750</div></div>
 <div class="kpi"><div class="v">~3,600</div><div class="l">document links on live pages</div><div class="d">120-page sample, 2.38 per page</div></div>
-<div class="kpi"><div class="v">726</div><div class="l">dated news pages to archive</div><div class="d">48.1% of the estate</div></div>
+<div class="kpi"><div class="v">726</div><div class="l">dated news pages to archive</div><div class="d">49.5% of the estate</div></div>
 </div>
 <details><summary>How the authoring-path finding was verified</summary>
-<p class="note">30 sampled authoring paths were requested. All 30 returned HTTP 200 with text/html and a final address of /utils/404?item=..., the site's soft-404 page. A link checker that reads status codes alone would score them as healthy. Public copies of documents are served from the media handler path instead, for example /-/media/dotgov/files/..., and mapping an authoring path to its public address is not a mechanical substitution: 10 sampled items could not be resolved that way. The count of documents that are public and must stay public therefore comes from the District's media export, not from the sitemap.</p>
+<p class="note">30 sampled authoring paths were requested. All 30 returned HTTP 200 with text/html and a final address of /utils/404?item=..., the site's soft-404 page. A link checker that reads status codes alone would score them as healthy. Public copies are served from the media handler path instead, for example /-/media/dotgov/files/.... A naive path substitution from the authoring path to the handler path resolved 0 of 10 sampled items (9 soft-404, 1 timeout); Sitecore derives the public address from the item, so the item IDs in the export give the exact mapping. Until that export arrives, the count of documents that are public and must stay public is unknown and comes from the media export, not from the sitemap.</p>
 </details>
 </section>
 
 <section aria-labelledby="s2">
-<h2 id="s2"><span class="n">02</span>First-pass disposition of all 1,509 live pages</h2>
+<h2 id="s2"><span class="n">02</span>First-pass disposition of all 1,468 unique live pages</h2>
 <p class="note">Rule set applied to every URL before any migration work. A first pass by section rule, confirmed page by page at discovery. Keep: everything outside News-and-Events and About-the-Air-District interiors. Merge: About-the-Air-District interiors. Archive: News-and-Events pages with a year segment. Retire: pages under /sectest2/.</p>
 <div class="kpis" style="margin-bottom:18px">
-<div class="kpi"><div class="v" style="color:var(--ok)">594</div><div class="l">keep and rebuild</div></div>
-<div class="kpi"><div class="v">183</div><div class="l">merge into a surviving page</div></div>
+<div class="kpi"><div class="v" style="color:var(--ok)">554</div><div class="l">keep and rebuild</div></div>
+<div class="kpi"><div class="v">182</div><div class="l">merge into a surviving page</div></div>
 <div class="kpi"><div class="v">726</div><div class="l">archive, do not rebuild</div></div>
 <div class="kpi"><div class="v" style="color:var(--warn)">6</div><div class="l">retire: live test pages</div></div>
 </div>
 <h3 style="font-size:15px;margin:18px 0 8px">www.baaqmd.gov, 1,399 pages by section</h3>
 <div class="bar"><span class="lab">News-and-Events</span><span class="track"><i style="width:100%"></i></span><b>734</b></div><div class="bar"><span class="lab">About-the-Air-District</span><span class="track"><i style="width:24%"></i></span><b>183</b></div><div class="bar"><span class="lab">Rules-and-Compliance</span><span class="track"><i style="width:22%"></i></span><b>168</b></div><div class="bar"><span class="lab">Funding-and-Incentives</span><span class="track"><i style="width:9%"></i></span><b>71</b></div><div class="bar"><span class="lab">About-Air-Quality</span><span class="track"><i style="width:8%"></i></span><b>62</b></div><div class="bar"><span class="lab">Permits</span><span class="track"><i style="width:6%"></i></span><b>50</b></div><div class="bar"><span class="lab">Plans-and-Climate</span><span class="track"><i style="width:6%"></i></span><b>49</b></div><div class="bar"><span class="lab">Community-Health</span><span class="track"><i style="width:3%"></i></span><b>28</b></div><div class="bar"><span class="lab">Contact-Us</span><span class="track"><i style="width:2%"></i></span><b>18</b></div><div class="bar"><span class="lab">Online-Services</span><span class="track"><i style="width:1%"></i></span><b>13</b></div><div class="bar"><span class="lab">Forms</span><span class="track"><i style="width:0%"></i></span><b>7</b></div><div class="bar"><span class="lab">Publications</span><span class="track"><i style="width:0%"></i></span><b>6</b></div><div class="bar"><span class="lab">Other</span><span class="track"><i style="width:1%"></i></span><b>10</b></div>
-<p class="note" style="margin-top:14px">These thirteen rows sum to 1,399. The other 110 pages sit on sparetheair.org (76), the strategic plan site (28) and three microsites (2 each).</p>
+<p class="note" style="margin-top:14px">These thirteen rows sum to 1,399. The other 69 pages sit on sparetheair.org (38), the strategic plan site (28) and three microsites (1 each). The per-URL disposition file is <a href="/dispositions.csv">published here as CSV</a>.</p>
 </section>
 
 <section aria-labelledby="s3">
@@ -86,7 +86,7 @@ details summary{cursor:pointer;color:var(--acc);font-size:14px;margin-top:10px}
     <div class="src">source page: <a href="https://www.baaqmd.gov/Rules-and-Compliance/Rule-Development/Rules-Under-Development">/Rules-and-Compliance/Rule-Development/Rules-Under-Development</a></div></article><article class="card"><div class="kind">Permit process</div><h3>Permit Types and Process</h3><p>The Air District&#x27;s permitting process encompasses multiple permit types to ensure comprehensive environmental compliance. While most projects require two fundamental permits, certain major facilities are subject to additional regulatory oversight.</p><p>The standard permitting process requires two critical permits that must be obtained prior to initiating any project. The two essential permits are the Authority to Construct (ATC) and the Permit to Operate (PO).</p>
     <ul class="meta"><li>Types of Permits</li><li>Permit Requirements</li><li>Permit Process</li><li>Contacting Us</li></ul>
     <div class="src">source page: <a href="https://www.baaqmd.gov/Permits/Permit-Instructions">/Permits/Permit-Instructions</a></div></article><article class="card"><div class="kind">News release</div><h3>Air District shares Bay Area clean air leadership at COP31 in Antalya</h3><p>The Air District shared how the Bay Area turns climate commitments into cleaner air at the United Nations Climate Change Conference, or COP31, which runs November 9 through 20. During a live virtual press conference from Antalya on November 10, Air District leaders described how regional action protects communities already living with the impacts of climate change.</p><p>At COP31, Air District representatives joined subnational and regional leaders to discuss resilient cities, electrification and grids and sustainable transportation. The Air District emphasized its work to deliver cleaner air at the regional level through programs and funding opportunities, while working with partners at COP31 to accelerate solutions for the people who need the</p>
-    <ul class="meta"><li>Date</li></ul>
+    
     <div class="src">source page: <a href="https://www.baaqmd.gov/News-and-Events/Page-Resources/2026-News/111026-COP31">/News-and-Events/Page-Resources/2026-News/111026-COP31</a></div></article>
 <details><summary>Show one record as JSON, the shape an API would return</summary>
 <pre>[
@@ -117,9 +117,7 @@ details summary{cursor:pointer;color:var(--acc);font-size:14px;margin-top:10px}
     &quot;type&quot;: &quot;news_release&quot;,
     &quot;title&quot;: &quot;Air District shares Bay Area clean air leadership at COP31 in Antalya&quot;,
     &quot;body_excerpt&quot;: &quot;The Air District shared how the Bay Area turns climate commitments into cleaner air at the United Nations Climate Change Conference, or COP31, which runs November 9 through 20. During a live virtual press conference from Antalya on November 10, Air District le&quot;,
-    &quot;sections&quot;: [
-      &quot;Date&quot;
-    ],
+    &quot;sections&quot;: [],
     &quot;canonical_url&quot;: &quot;https://www.baaqmd.gov/News-and-Events/Page-Resources/2026-News/111026-COP31&quot;
   }
 ]</pre>
